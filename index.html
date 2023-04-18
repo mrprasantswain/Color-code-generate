@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="" content="">
+    <title>Color Code Generator</title>
+    <link crossorigin="anonymous" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" />
+<link rel="stylesheet" href="style.css" type="text/css" media="all" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="colorBox">
+        <div class="previewBox">
+          <div class="saveColor">
+            Save
+          </div>
+        </div>
+        <div class="codeBox">
+          <div class="hxl">
+            <input type="text" id="htmlColorCode" readonly="true"/>
+            <button><i class="fa fa-copy copyButton"></i>Copy</button>
+          </div>
+          <div class="rgb">
+            <input type="text" id="rgbColorCode" readonly="true" />
+            <button><i class="fa fa-copy copyButton"></i>Copy</button>
+          </div>
+          <div class="hsl">
+            <input type="text" name="" id="hslColorCode" readonly="true" />
+            <button><i class="fa fa-copy copyButton"></i>Copy</button>
+          </div>
+        </div>
+        <div class="controlBox">
+          <div class="rBox">
+            <div class="titel" style="--bg:red;">
+              Red
+            </div>
+            <div class="input">
+              <input type="range" id="rRange" min="0" max="255" oninput="UserGenerate(this)" value="1"/>
+            </div>
+            <div class="value">
+              <input type="number" name="rValue" id="rValue" readonly="true" />
+            </div>
+          </div>
+          <div class="gBox">
+            <div class="titel" style="--bg:green;">
+              Green
+            </div>
+            <div class="input">
+              <input type="range" id="gRange" min="0" max="255" oninput="UserGenerate(this)" value="109"/>
+            </div>
+            <div class="value">
+              <input type="number" name="gValue" id="gValue" readonly="true"/>
+            </div>
+          </div>
+          <div class="bBox">
+            <div class="titel" style="--bg:blue;">
+              Blue
+            </div>
+            <div class="input">
+              <input type="range" id="bRange" min="0" max="255" oninput="UserGenerate(this)" value="100"/>
+            </div>
+            <div class="value">
+              <input type="number" name="bValue" id="bValue" readonly="true"/>
+            </div>
+          </div>
+          <button id="colorButton" onclick="RandomGenerate()">Generate New Color</button>
+        </div>
+      </div>
+      <div class="saveColorBox"></div>
+    </div>
+<script src="script.js" type="text/javascript" charset="utf-8"></script>
+  </body>
+</html>

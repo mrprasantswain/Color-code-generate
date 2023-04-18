@@ -1,0 +1,83 @@
+
+      *{
+        margin: 0; padding: 0; box-sizing: border-box;
+      }
+      *::selection{
+        background: green; color: #fff;
+      }
+      body{
+        background: #cccfff;
+      }
+      
+      .container{
+        width: 100vw; min-height: 100vh; display: flex; flex-direction: column; align-items: start; justify-content: center;
+      }
+      .colorBox{
+        max-width: 500px; width: 100%; margin: auto; background: #fff;
+      }
+      .previewBox{
+        width: 350px; height: 200px; border: 5px solid #000; margin: 10px auto; background: rgb(255, 0, 255); position: relative;
+      } .previewBox .copyBox{
+        opacity: 0 !important;
+      }
+      .saveColor{
+        position: absolute; top: 5px; right: 5px; font-size: 14px; padding: 5px; background: #fff; color: #000; font-weight: 700; border-radius: 4px;
+      }
+      .controlBox{
+        display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; padding: 10px; user-select: none; -moz-user-select: none; -webkit-user-select: none;
+      }
+      .rBox, .gBox, .bBox{
+        width: 100%; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; margin: 5px auto; padding: 5px; background: silver;
+      }
+      .controlBox .titel{
+        width: 20px; font-size: 0px; font-weight: 700; aspect-ratio: 1/1; background: var(--bg); border-radius: 5px; box-shadow: 0px 0px 0px 3px #fff; margin-left: 5px;
+      }
+      .controlBox .value{
+        width: 40px; user-select: none; -moz-user-select: none; -webkit-user-select: none;
+      } .value input{
+        font-size: 18px; font-weight: 600; text-align: center; width: 100%; outline: none; border: none; background: transparent;
+      }
+      .controlBox .input{
+        width: calc(100% - 130px);
+      } .input input{
+        width: 100%;
+      }
+      #colorButton{
+        margin: 10px auto; width: 100%; padding: 10px; font-weight: 700; background: teal; color: #fff; border: none; outline: none; border-radius: 3px;
+      }
+      .codeBox div{
+        width: 100%; padding: 10px;
+      }
+      .codeBox input, .codeBox button{
+        width: 85%; font-size: 18px; border: none; outline: none; font-weight: 700; background transparent
+      }
+      .codeBox button{
+        width: calc(100% - 87%); font-size: 14px; font-weight: 400; padding: 5px 0px; background: purple; color: #fff; border-radius: 2px; transition: all 0.8s; user-select: none;
+      }
+      .codeBox button:active{
+        transform: scale(0.5);
+      }
+      .saveColorBox{
+        width: 100vw; display: flex; flex-wrap: wrap; justify-content: center;
+      }
+      .savedColor{
+        margin: 8px auto; width: 175px; overflow: hidden; background: #fff; padding: 8px; border-radius: 3px;
+      } .savedColorPreview{
+        width: 100%; aspect-ratio: 1/0.7; border-radius: 3px; position: relative; border: 1px solid #000;
+      } .remove{
+        position: absolute; top: 3px; right: 3px; font-size: 10px; font-weight: 700; padding: 3px; background: #fff; color: #000; border-radius: 2px; z-index: 3;
+      } .savedColorPreview .htmlCode{
+        background: transparent; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: 2;
+      }
+      .saveColor.saved{
+        background: red;
+      }
+      .savedColor input{
+        border: none; outline: none; padding: 5px 0px; font-size: 14px; font-weight: 700; display: block;
+      }
+      .alert{
+        position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; background: rgba(0,0,0,0.9); color: #fff; text-transform: uppercase; display: flex; align-items: center; justify-content: center; font-size: 25px; font-weight: 500; text-align: center; line-height: 50px; z-index: 999;
+      }
+      .alert2{
+        position: absolute; top: 0; left: 0; z-index: -4; background: rgba(0,0,0,0.95); width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; color: #fff; line-height: 30px; font-size: 18px; text-align: center;
+      }
